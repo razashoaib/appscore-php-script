@@ -35,7 +35,7 @@ class DBUtility {
 		} catch (Exception $ex) {
 			
 			// Response
-			$data = ['status' => '[Error] '. $e->getMessage()];
+			$data = ['status' => '[Error] '. $ex->getMessage()];
 			header('Content-Type: application/json');
 			echo json_encode($data);
 		}
